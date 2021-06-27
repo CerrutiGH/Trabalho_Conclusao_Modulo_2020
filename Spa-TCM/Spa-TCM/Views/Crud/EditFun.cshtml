@@ -1,0 +1,146 @@
+﻿@model Spa_TCM.Models.FuncionarioData
+
+@{
+    ViewBag.Title = "EditFun";
+    Layout = "~/Views/Shared/_LayoutLoginCadastro.cshtml";
+}
+
+<head>
+    <style>
+        .margin {
+            margin-top: 80px;
+        }
+
+        body {
+            background: rgb(78,78,83);
+            background: linear-gradient(90deg, rgba(78,78,83,1) 23%, rgba(128,128,128,1) 71%);
+        }
+
+        .form-box {
+            width: 60%;
+            margin: auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.88);
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+
+<div class="margin">
+    <div class="form-box">
+
+        <h2>Atualizar Dados</h2>        
+        
+        @using (Html.BeginForm("UpdateFuncionario", "Crud", new { id = Request.Url.Segments.Last() }, FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })              
+
+            <h1></h1>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NOME_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NOME_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NOME_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EMAIL_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EMAIL_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EMAIL_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SENHA_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SENHA_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SENHA_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IDADE_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.IDADE_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.IDADE_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CPF_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CPF_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CPF_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TELEFONE_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TELEFONE_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TELEFONE_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RG_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RG_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RG_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CIDADE_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CIDADE_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CIDADE_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CARGO_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(m => m.CARGO_FUN, new List<SelectListItem>
+                    { new SelectListItem{Text="Gerente"},
+                      new SelectListItem{Text="Administrador"},
+                      new SelectListItem{Text="Acupunturista"},
+                      new SelectListItem{Text="aromaterapeuta"},
+                      new SelectListItem{Text="Massagista"}}, "Selecione")
+                        @Html.ValidationMessageFor(model => model.CARGO_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CEP_FUN, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CEP_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CEP_FUN, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" class="btn btn-outline-light">Atualizar</button>
+                    
+                </div>
+            </div>
+
+        }
+
+        <div>
+            @Html.ActionLink("Cancelar", "ListarFuncionario")
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model Spa_TCM.Models.FuncionarioData
+
+@{
+    ViewBag.Title = "MenuPrincipal";
+    Layout = "~/Views/Shared/_LayoutLoginCadastro.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="../Content/MenuPrincipal.css">
+</head>
+
+<div class="margin">
+    <div class="form-box">
+        <h2 class="titulo">Menu Principal</h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gerenciar Funcionários</h5>
+                        <p class="card-text">Gerenciamento de funcionários da Lotus SPA.</p>
+                        
+                           <a href="~/Crud/ListarFuncionario" type="button" class="btn btn-outline-dark">Gerenciar</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Funcionários</h5>
+                        <p class="card-text">Registro de funcionários da Lotus SPA.</p>
+                       
+                            <a href="~/Crud/CadastroFun" type="button" class="btn btn-outline-dark">Cadastrar</a>
+                      
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Listar Reservas</h5>
+                        <p class="card-text">Lista das reservas solicitadas pelos Clientes.</p>
+                        <a href="~/Crud/ListarReservas" type="button" class="btn btn-outline-dark">Gerenciar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Agendar Reservas</h5>
+                        <p class="card-text">Agendar reservas solicitadas pelos clientes.</p>
+                        <a href="~/Crud/RegistrarReserva" type="button" class="btn btn-outline-dark">Agendar</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

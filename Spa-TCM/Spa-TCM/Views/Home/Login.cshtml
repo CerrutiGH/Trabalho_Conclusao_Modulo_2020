@@ -1,0 +1,54 @@
+﻿@model Spa_TCM.Models.FuncionarioData
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLoginCadastro.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="../Content/Internal.css">
+</head>
+
+
+<div class="margin">
+    <div class="form-box">
+
+
+
+        @using (Html.BeginForm("VerificarUsuario", "Home", FormMethod.Post))
+        {
+
+            <h3>Entrar</h3>
+            <div class="form-group">
+                <label>E-mail</label>
+                @Html.EditorFor(model => model.EMAIL_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EMAIL_FUN, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                @Html.EditorFor(model => model.SENHA_FUN, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SENHA_FUN, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label>Cargo</label>
+                @Html.DropDownListFor(m => m.CARGO_FUN, new List<SelectListItem>
+                     { new SelectListItem{Text="Gerente"},
+                       new SelectListItem{Text="Administrador"},
+                       new SelectListItem{Text="Acupunturista"},
+                       new SelectListItem{Text="Aromaterapeuta"},
+                       new SelectListItem{Text="Massagista"}}, "Selecione")
+                @Html.ValidationMessageFor(model => model.CARGO_FUN,"", new { @class = "text-danger" })
+            </div>
+            <br>
+            <div>
+                <button type="submit" class="btn btn-outline-light">Entrar</button>
+            </div>
+           
+
+
+            <!-- inserindo scripts para validação -->
+        }
+    </div>
+</div>

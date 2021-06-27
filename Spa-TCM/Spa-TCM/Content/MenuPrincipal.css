@@ -1,0 +1,22 @@
+﻿.margin {
+    margin-top: 80px;
+    color: white;
+}
+
+body {
+    background: rgb(78,78,83);
+    background: linear-gradient(90deg, rgba(78,78,83,1) 23%, rgba(128,128,128,1) 71%);
+}
+
+.form-box {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.88);
+    border-radius: 10px;
+    color: Black;
+}
+
+.titulo{
+    color:white;
+}

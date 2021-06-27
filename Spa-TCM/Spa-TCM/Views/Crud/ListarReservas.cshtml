@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Spa_TCM.Models.Reserva>
+
+@{
+    ViewBag.Title = "ListarReservas";
+    Layout = "~/Views/Shared/_LayoutLoginCadastro.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="../Content/MenuPrincipal.css">
+</head>
+
+<div class="margin">
+
+    <h2>ListarReservas</h2>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL_CLI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RESERVA_DATA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RESERVA_HORA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RESERVA_QTD)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMAIL_CLI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RESERVA_DATA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RESERVA_HORA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RESERVA_QTD)
+                </td>
+                <td>
+                    @Html.ActionLink("Atualizar", "EditReserva", new { id = item.COD_RES }) 
+                    @Html.ActionLink("Deletar", "DeleteReserva", new { id = item.COD_RES })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div>
+        <a href="~/Crud/MenuPrincipal" type="button" class="btn btn-outline-light">Voltar ao menu principal</a>
+    </div>
+    </div>

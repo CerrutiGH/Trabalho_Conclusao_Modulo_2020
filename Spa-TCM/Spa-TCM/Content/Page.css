@@ -1,0 +1,209 @@
+﻿body {
+    background: rgb(78,78,83);
+    background: linear-gradient(90deg, rgba(78,78,83,1) 23%, rgba(128,128,128,1) 71%);
+   
+}
+
+.jumb {
+    background: rgb(78,78,83);
+    background: linear-gradient(90deg, rgba(78,78,83,1) 23%, rgba(128,128,128,1) 71%);
+}
+.carrosselmeu {
+    background-color: rgba(0, 0, 0, 0.82);
+    height: 120px;
+    border-radius: 15px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.82);
+    height: 200px;
+}
+
+
+
+.conteudo {
+    display: none;
+}
+
+.abudabi {
+    color: white;
+}
+
+#conteudo1 {
+    display: block;
+}
+
+.page-container {
+    padding: 20px 10px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: auto;
+    background-color: rgba(29, 27, 29, 0.47);
+    text-align: left;
+    align-content: center;
+    color: white;
+  
+}
+
+.page-container2 {
+    min-height: 100%;
+    background-color: rgba(29, 27, 29, 0.47);
+    left: 50%;
+    top: 20px;
+    margin-left: -170px;
+    position: absolute;
+    width: 340px;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
+    border: solid;
+    border-color: black;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+.hero2 {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    align-items: center;
+}
+
+
+.hero {
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+.heroo {
+    height: 200px;
+   
+}
+
+
+
+.hero3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.heropersonalizado {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.hero h2, .hero h3 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 90px;
+}
+
+.hero h3 {
+    font-size: 90px;
+    bottom: 4%;
+    right: 10%;
+    font-weight: 500;
+}
+
+.sobreimg {
+    background-image: url("../images/sobreimg.jpg");
+}
+
+.servicoimg {
+    background-image: url("../images/servico.jpg");
+}
+
+.contatoimg {
+    background-image: url("../images/imgcontato.jpg");
+}
+
+.reservaimg {
+    background-image: url("../images/reservaimg.jpg");
+}
+
+.content {
+    -webkit-transition: margin-left .8s ease-in-out;
+    -moz-transition: margin-left .8s ease-in-out;
+    -o-transition: margin-left .8s ease-in-out;
+    transition: margin-left .8s ease-in-out;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.81);
+    color: white;
+    border: solid;
+    border-color: black;
+}
+
+
+    .button:hover {
+        background-color: rgba(0, 0, 0, 0.94);
+        color: white;
+    }
+
+
+.label {
+    background-color: transparent;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+
+.colorwhite {
+    color: white;
+}
+
+.colorBlack {
+    color: black;
+}

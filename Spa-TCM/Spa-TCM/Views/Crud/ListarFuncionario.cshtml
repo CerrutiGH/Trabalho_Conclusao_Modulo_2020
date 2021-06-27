@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Spa_TCM.Models.FuncionarioData>
+
+@{
+    ViewBag.Title = "ListarFuncionario";
+    Layout = "~/Views/Shared/_LayoutLoginCadastro.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="../Content/MenuPrincipal.css">
+</head>
+
+<div class="margin">
+
+
+    <h2>ListarFuncionario</h2>
+
+
+    <table class="table">
+        <tr class="titulo">
+
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SENHA_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IDADE_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFONE_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RG_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CIDADE_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CARGO_FUN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEP_FUN)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr class="titulo">
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOME_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMAIL_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SENHA_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDADE_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPF_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TELEFONE_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RG_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CIDADE_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CARGO_FUN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CEP_FUN)
+                </td>
+                <td>
+                    @Html.ActionLink("Atualizar", "EditFun", new { id = item.COD_FUN })  <!--Isso está certo-->
+                    @Html.ActionLink("Deletar", "DeleteFun", new { id = item.COD_FUN })
+                </td>
+            </tr>
+
+        }
+
+    </table>
+    <div>
+    <a href="~/Crud/MenuPrincipal" type="button" class="btn btn-outline-light">Voltar ao menu principal</a>
+    </div>
+</div>

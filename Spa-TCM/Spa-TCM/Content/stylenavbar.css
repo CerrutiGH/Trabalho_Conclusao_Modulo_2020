@@ -1,0 +1,7 @@
+﻿.backgroundnav{
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+ul li a :hover {
+    color:blueviolet;
+}

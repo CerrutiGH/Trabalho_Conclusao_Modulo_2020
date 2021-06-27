@@ -1,0 +1,84 @@
+﻿@model Spa_TCM.Models.Reserva
+
+@{
+    ViewBag.Title = "EditReserva";
+    Layout = "~/Views/Shared/_LayoutLoginCadastro.cshtml";
+}
+
+<head>
+    <style>
+        .margin {
+            margin-top: 80px;
+        }
+
+        body {
+            background: rgb(78,78,83);
+            background: linear-gradient(90deg, rgba(78,78,83,1) 23%, rgba(128,128,128,1) 71%);
+        }
+
+        .form-box {
+            width: 60%;
+            margin: auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.88);
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+
+<div class="margin">
+    <div class="form-box">
+
+        <h2>EditReserva</h2>
+
+        @using (Html.BeginForm("UpdateReserva", "Crud", new { id = Request.Url.Segments.Last() }, FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Reserva</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EMAIL_CLI, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EMAIL_CLI, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EMAIL_CLI, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RESERVA_DATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RESERVA_DATA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RESERVA_DATA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RESERVA_HORA, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RESERVA_HORA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RESERVA_HORA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RESERVA_QTD, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.RESERVA_QTD, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.RESERVA_QTD, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-outline-light">Atualizar</button>
+                    </div>
+                </div>
+            </div>
+        }
+        <div>
+            @Html.ActionLink("Cancelar", "ListarReservas")
+        </div>
+    </div>
+</div>
