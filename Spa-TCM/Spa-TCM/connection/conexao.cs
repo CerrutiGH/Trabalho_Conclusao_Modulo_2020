@@ -5,7 +5,7 @@ namespace Spa_TCM.connection
 {
     public class conexao
     {
-        MySqlConnection connection = new MySqlConnection("Server=localhost; Database=spa;user=root;pwd=carol2004");
+        MySqlConnection connection = new MySqlConnection("Server=localhost; Database=spa;user=root;pwd=root");
         public static string msg;
 
         public MySqlConnection ConectarBD()
